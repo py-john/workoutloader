@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-'''
-workout.py
+''' workout.py
 This program opens a different video file for a daily
 workout depending on which day it is run.
 '''
@@ -15,8 +14,7 @@ P90X_FOLDER = '/Users/john/Documents/P90X3/'
 
 
 class Workout(object):
-    '''
-    Workout class defines the workout with days to be done and
+    ''' Workout class defines the workout with days to be done and
     relavant file paths.
     '''
     def __init__(self, name, days, video_file, image_file=None):
@@ -67,142 +65,145 @@ def print_calendar(day):
             if d % 7 == 0:
                 print()
 
+def main():
 
-# define workouts and add to workouts list
+    # define workouts and add to workouts list
+    workouts = []
 
-workouts = []
+    total_synergistics = Workout(
+            'Total Synergistics',
+            [1, 8, 15, 64, 78],
+            P90X_FOLDER + 'Total Synergistics.mp4',
+            P90X_FOLDER + 'Total Synergistics.png')
+    workouts.append(total_synergistics)
 
-total_synergistics = Workout(
-        'Total Synergistics',
-        [1, 8, 15, 64, 78],
-        P90X_FOLDER + 'Total Synergistics.mp4',
-        P90X_FOLDER + 'Total Synergistics.png')
-workouts.append(total_synergistics)
+    agility_x = Workout(
+            'Agility X',
+            [2, 9, 16, 26, 65, 79, 113],
+            P90X_FOLDER + 'Agility X.mp4')
+    workouts.append(agility_x)
 
-agility_x = Workout(
-        'Agility X',
-        [2, 9, 16, 26, 65, 79, 113],
-        P90X_FOLDER + 'Agility X.mp4')
-workouts.append(agility_x)
+    x3_yoga = Workout(
+            'X3 Yoga',
+            [3, 10, 17, 27, 31, 38, 45, 55, 59, 66, 73, 80, 86, 94, 101, 108, 114],
+            P90X_FOLDER + 'X3 Yoga.mp4')
+    workouts.append(x3_yoga)
 
-x3_yoga = Workout(
-        'X3 Yoga',
-        [3, 10, 17, 27, 31, 38, 45, 55, 59, 66, 73, 80, 86, 94, 101, 108, 114],
-        P90X_FOLDER + 'X3 Yoga.mp4')
-workouts.append(x3_yoga)
+    the_challenge = Workout(
+            'The Challenge',
+            [4, 11, 18, 67, 81],
+            P90X_FOLDER + 'The Challenge.mp4',)
+    workouts.append(the_challenge)
 
-the_challenge = Workout(
-        'The Challenge',
-        [4, 11, 18, 67, 81],
-        P90X_FOLDER + 'The Challenge.mp4',)
-workouts.append(the_challenge)
+    pilates_x = Workout(
+            'Pilates X',
+            [5, 12, 19, 25, 53, 68, 82, 97, 104, 111, 116],
+            P90X_FOLDER + 'Pilates X.mp4')
+    workouts.append(pilates_x)
 
-pilates_x = Workout(
-        'Pilates X',
-        [5, 12, 19, 25, 53, 68, 82, 97, 104, 111, 116],
-        P90X_FOLDER + 'Pilates X.mp4')
-workouts.append(pilates_x)
+    incinerator = Workout(
+            'Incinerator',
+            [6, 13, 20, 69, 83],
+            P90X_FOLDER + 'Incinerator.mp4',
+            P90X_FOLDER + 'Incinerator.png')
+    workouts.append(incinerator)
 
-incinerator = Workout(
-        'Incinerator',
-        [6, 13, 20, 69, 83],
-        P90X_FOLDER + 'Incinerator.mp4',
-        P90X_FOLDER + 'Incinerator.png')
-workouts.append(incinerator)
+    dynamix = Workout(
+            'Dynamix',
+            [7, 14, 21, 23, 28, 35, 42, 49, 51, 56, 63, 70, 77, 84, 90, 98, 105, 112, 118],
+            P90X_FOLDER + 'Dynamix.mp4')
+    workouts.append(dynamix)
 
-dynamix = Workout(
-        'Dynamix',
-        [7, 14, 21, 23, 28, 35, 42, 49, 51, 56, 63, 70, 77, 84, 90, 98, 105, 112, 118],
-        P90X_FOLDER + 'Dynamix.mp4')
-workouts.append(dynamix)
+    eccentric_upper = Workout(
+            'Eccentric Upper',
+            [29, 32, 36, 39, 43, 46, 57, 60, 71, 74, 89],
+            P90X_FOLDER + 'Eccentric Upper.mp4')
+    workouts.append(eccentric_upper)
 
-eccentric_upper = Workout(
-        'Eccentric Upper',
-        [29, 32, 36, 39, 43, 46, 57, 60, 71, 74, 89],
-        P90X_FOLDER + 'Eccentric Upper.mp4')
-workouts.append(eccentric_upper)
+    eccentric_lower = Workout(
+            'Eccentric Lower',
+            [30, 33, 37, 40, 44, 47, 58, 61, 72, 75, 88],
+            P90X_FOLDER + 'Eccentric Lower.mp4')
+    workouts.append(eccentric_lower)
 
-eccentric_lower = Workout(
-        'Eccentric Lower',
-        [30, 33, 37, 40, 44, 47, 58, 61, 72, 75, 88],
-        P90X_FOLDER + 'Eccentric Lower.mp4')
-workouts.append(eccentric_lower)
+    mmx = Workout(
+            'MMX',
+            [34, 41, 48, 62, 76],
+            P90X_FOLDER + 'MMX.mp4')
+    workouts.append(mmx)
 
-mmx = Workout(
-        'MMX',
-        [34, 41, 48, 62, 76],
-        P90X_FOLDER + 'MMX.mp4')
-workouts.append(mmx)
+    isometrix = Workout(
+            'Isometrix',
+            [22, 50, 85, 117],
+            P90X_FOLDER + 'Isometrix.mp4')
+    workouts.append(isometrix)
 
-isometrix = Workout(
-        'Isometrix',
-        [22, 50, 85, 117],
-        P90X_FOLDER + 'Isometrix.mp4')
-workouts.append(isometrix)
+    the_warrior = Workout(
+            'The Warrior',
+            [24, 52],
+            P90X_FOLDER + 'The Warrior.mp4')
+    workouts.append(the_warrior)
 
-the_warrior = Workout(
-        'The Warrior',
-        [24, 52],
-        P90X_FOLDER + 'The Warrior.mp4')
-workouts.append(the_warrior)
+    decelerator = Workout(
+            'Decelerator',
+            [54, 87],
+            P90X_FOLDER + 'Decelerator.mp4')
+    workouts.append(decelerator)
 
-decelerator = Workout(
-        'Decelerator',
-        [54, 87],
-        P90X_FOLDER + 'Decelerator.mp4')
-workouts.append(decelerator)
+    complex_upper = Workout(
+            'Complex Upper',
+            [92, 95, 99, 102, 106, 109],
+            P90X_FOLDER + 'Complex Upper.mp4')
+    workouts.append(complex_upper)
 
-complex_upper = Workout(
-        'Complex Upper',
-        [92, 95, 99, 102, 106, 109],
-        P90X_FOLDER + 'Complex Upper.mp4')
-workouts.append(complex_upper)
+    complex_lower = Workout(
+            'Complex Lower',
+            [93, 96, 100, 103, 107, 110],
+            P90X_FOLDER + 'Complex Lower.mp4')
+    workouts.append(complex_lower)
 
-complex_lower = Workout(
-        'Complex Lower',
-        [93, 96, 100, 103, 107, 110],
-        P90X_FOLDER + 'Complex Lower.mp4')
-workouts.append(complex_lower)
+    ab_ripper = Workout(
+            'Ab Ripper',
+            [],
+            P90X_FOLDER + 'Ab Ripper.mp4')
+    workouts.append(ab_ripper)
 
-ab_ripper = Workout(
-        'Ab Ripper',
-        [],
-        P90X_FOLDER + 'Ab Ripper.mp4')
-workouts.append(ab_ripper)
-
-cvx = Workout(
-        'CVX',
-        [115],
-        P90X_FOLDER + 'CVX.mp4')
-workouts.append(cvx)
+    cvx = Workout(
+            'CVX',
+            [115],
+            P90X_FOLDER + 'CVX.mp4')
+    workouts.append(cvx)
 
 
-# find workout for current day
-now = datetime.now()
-day_number = (now - PROGRAM_START_DATE).days + 1
+    # find workout for current day
+    now = datetime.now()
+    day_number = (now - PROGRAM_START_DATE).days + 1
 
-workout = None
-for w in workouts:
-    if day_number in w.days:
-        workout = w
-        break
+    workout = None
+    for w in workouts:
+        if day_number in w.days:
+            workout = w
+            break
 
-# Check for days with 2 workouts
-if workout == complex_upper:
-    option = None
-    print('1) Ab Ripper     2) Complex Upper')
-    while(option not in ['1', '2']):
-        option = input('> ')
-    if option == '1':
-        workout = ab_ripper
+    # Check for days with 2 workouts
+    if workout == complex_upper:
+        option = None
+        print('1) Ab Ripper     2) Complex Upper')
+        while(option not in ['1', '2']):
+            option = input('> ')
+        if option == '1':
+            workout = ab_ripper
 
-# Draw calander
-print_calendar(day_number)
+    # Draw calander
+    print_calendar(day_number)
 
-# Open and maximize workout video
-if workout:
-    print('\n\nDay:', day_number)
-    print(workout, '\n')
-    sleep(2)
-    workout.load_image()
-    workout.load_video()
+    # Open and maximize workout video
+    if workout:
+        print('\n\nDay:', day_number)
+        print(workout, '\n')
+        sleep(2)
+        workout.load_image()
+        workout.load_video()
+
+if __name__ == '__main__':
+    main()
