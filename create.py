@@ -3,6 +3,8 @@ import subprocess
 from time import sleep
 import pyautogui
 
+P90X_FOLDER = '/Users/john/Documents/P90X3/'
+
 class Workout(object):
     '''Defines the workout with days to be done and
        relavant file paths.
