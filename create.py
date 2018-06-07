@@ -36,108 +36,74 @@ def workout_list():
     # define workouts and add to workouts list
     workouts = []
 
-    total_synergistics = Workout(
-            'Total Synergistics',
-            [1, 8, 15, 64, 78],
-            P90X_FOLDER + 'Total Synergistics.mp4',
-            P90X_FOLDER + 'Total Synergistics.png')
-    workouts.append(total_synergistics)
+    workouts.append(Workout('Total Synergistics',
+                            [1, 8, 15, 64, 78],
+                            P90X_FOLDER + 'Total Synergistics.mp4',
+                            P90X_FOLDER + 'Total Synergistics.png')
 
-    agility_x = Workout(
-            'Agility X',
-            [2, 9, 16, 26, 65, 79, 113],
-            P90X_FOLDER + 'Agility X.mp4')
-    workouts.append(agility_x)
+    workouts.append(Workout('Agility X',
+                            [2, 9, 16, 26, 65, 79, 113],
+                            P90X_FOLDER + 'Agility X.mp4'))
 
-    x3_yoga = Workout(
-            'X3 Yoga',
-            [3, 10, 17, 27, 31, 38, 45, 55, 59, 66, 73, 80, 86, 94, 101, 108, 114],
-            P90X_FOLDER + 'X3 Yoga.mp4')
-    workouts.append(x3_yoga)
+    workouts.append(Workout('X3 Yoga',
+                            [3, 10, 17, 27, 31, 38, 45, 55, 59, 66, 73, 80, 86, 94, 101, 108, 114],
+                            P90X_FOLDER + 'X3 Yoga.mp4'))
 
-    the_challenge = Workout(
-            'The Challenge',
-            [4, 11, 18, 67, 81],
-            P90X_FOLDER + 'The Challenge.mp4',)
-    workouts.append(the_challenge)
+    workouts.append(Workout('The Challenge',
+                            [4, 11, 18, 67, 81],
+                            P90X_FOLDER + 'The Challenge.mp4',))
 
-    pilates_x = Workout(
-            'Pilates X',
-            [5, 12, 19, 25, 53, 68, 82, 97, 104, 111, 116],
-            P90X_FOLDER + 'Pilates X.mp4')
-    workouts.append(pilates_x)
+    workouts.append(Workout('Pilates X',
+                            [5, 12, 19, 25, 53, 68, 82, 97, 104, 111, 116],
+                            P90X_FOLDER + 'Pilates X.mp4'))
 
-    incinerator = Workout(
-            'Incinerator',
-            [6, 13, 20, 69, 83],
-            P90X_FOLDER + 'Incinerator.mp4',
-            P90X_FOLDER + 'Incinerator.png')
-    workouts.append(incinerator)
+    workouts.append(Workout('Incinerator',
+                            [6, 13, 20, 69, 83],
+                            P90X_FOLDER + 'Incinerator.mp4',
+                            P90X_FOLDER + 'Incinerator.png'))
 
-    dynamix = Workout(
-            'Dynamix',
-            [7, 14, 21, 23, 28, 35, 42, 49, 51, 56, 63, 70, 77, 84, 90, 98, 105, 112, 118],
-            P90X_FOLDER + 'Dynamix.mp4')
-    workouts.append(dynamix)
+    workouts.append(Workout('Dynamix',
+                            [7, 14, 21, 23, 28, 35, 42, 49, 51, 56, 63, 70, 77, 84, 90, 98, 105, 112, 118],
+                            P90X_FOLDER + 'Dynamix.mp4'))
 
-    eccentric_upper = Workout(
-            'Eccentric Upper',
-            [29, 32, 36, 39, 43, 46, 57, 60, 71, 74, 89],
-            P90X_FOLDER + 'Eccentric Upper.mp4')
-    workouts.append(eccentric_upper)
+    workouts.append(Workout('Eccentric Upper',
+                            [29, 32, 36, 39, 43, 46, 57, 60, 71, 74, 89],
+                            P90X_FOLDER + 'Eccentric Upper.mp4')
 
-    eccentric_lower = Workout(
-            'Eccentric Lower',
-            [30, 33, 37, 40, 44, 47, 58, 61, 72, 75, 88],
-            P90X_FOLDER + 'Eccentric Lower.mp4')
-    workouts.append(eccentric_lower)
+    workouts.append(Workout('Eccentric Lower',
+                            [30, 33, 37, 40, 44, 47, 58, 61, 72, 75, 88],
+                            P90X_FOLDER + 'Eccentric Lower.mp4'))
 
-    mmx = Workout(
-            'MMX',
-            [34, 41, 48, 62, 76],
-            P90X_FOLDER + 'MMX.mp4')
-    workouts.append(mmx)
+    workouts.append(Workout('MMX',
+                            [34, 41, 48, 62, 76],
+                            P90X_FOLDER + 'MMX.mp4'))
 
-    isometrix = Workout(
-            'Isometrix',
-            [22, 50, 85, 117],
-            P90X_FOLDER + 'Isometrix.mp4')
-    workouts.append(isometrix)
+    workouts.append(Workout('Isometrix',
+                            [22, 50, 85, 117],
+                            P90X_FOLDER + 'Isometrix.mp4'))
 
-    the_warrior = Workout(
-            'The Warrior',
-            [24, 52],
-            P90X_FOLDER + 'The Warrior.mp4')
-    workouts.append(the_warrior)
+    workouts.append(Workout('The Warrior',
+                            [24, 52],
+                            P90X_FOLDER + 'The Warrior.mp4'))
 
-    decelerator = Workout(
-            'Decelerator',
-            [54, 87],
-            P90X_FOLDER + 'Decelerator.mp4')
-    workouts.append(decelerator)
+    workouts.append(Workout('Decelerator',
+                            [54, 87],
+                            P90X_FOLDER + 'Decelerator.mp4'))
 
-    complex_upper = Workout(
-            'Complex Upper',
-            [92, 95, 99, 102, 106, 109],
-            P90X_FOLDER + 'Complex Upper.mp4')
-    workouts.append(complex_upper)
+    workouts.append(Workout('Complex Upper',
+                            [92, 95, 99, 102, 106, 109],
+                            P90X_FOLDER + 'Complex Upper.mp4'))
 
-    complex_lower = Workout(
-            'Complex Lower',
-            [93, 96, 100, 103, 107, 110],
-            P90X_FOLDER + 'Complex Lower.mp4')
-    workouts.append(complex_lower)
+    workouts.append(Workout('Complex Lower',
+                            [93, 96, 100, 103, 107, 110],
+                            P90X_FOLDER + 'Complex Lower.mp4'))
 
-    ab_ripper = Workout(
-            'Ab Ripper',
-            [],
-            P90X_FOLDER + 'Ab Ripper.mp4')
-    workouts.append(ab_ripper)
+    workouts.append(Workout('Ab Ripper',
+                            [],
+                            P90X_FOLDER + 'Ab Ripper.mp4'))
 
-    cvx = Workout(
-            'CVX',
-            [115],
-            P90X_FOLDER + 'CVX.mp4')
-    workouts.append(cvx)
+    workouts.append(Workout('CVX',
+                            [115],
+                            P90X_FOLDER + 'CVX.mp4'))
 
     return workouts
