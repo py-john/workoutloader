@@ -1,3 +1,7 @@
+"""create.py
+   Define the Workout class and function to
+   create a list of the different workout objects.
+"""
 import os
 import subprocess
 from time import sleep
@@ -15,7 +19,7 @@ class Workout(object):
         self.image_file = image_file
 
     def load_video(self):
-        """Open video file, adjust the system volume and maximize the video"""
+        """Open video file, adjust the system volume and maximize the video."""
         subprocess.Popen(['open', self.video_file])
         os.system("osascript -e 'set Volume 2.9'")
         sleep(1.5)
@@ -23,7 +27,7 @@ class Workout(object):
         pyautogui.hotkey('command', 'f')
 
     def load_image(self):
-        """Image file shows the exercises so weights can be pre-adjusted"""
+        """Image file shows the exercises so weights can be pre-adjusted."""
         if self.image_file:
             subprocess.Popen(['open', self.image_file])
             sleep(10)
