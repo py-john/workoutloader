@@ -7,7 +7,7 @@ P90X_FOLDER = '/Users/john/Documents/P90X3/'
 
 
 class Workout(object):
-    """Define the workout with days to be done and relavant file paths."""
+    """Define the workout with days to be done and relevant file paths."""
     def __init__(self, name, days, video_file, image_file=None):
         self.name = name
         self.days = days
@@ -15,6 +15,7 @@ class Workout(object):
         self.image_file = image_file
 
     def load_video(self):
+        """Open video file, adjust the system volume and maximize the video"""
         subprocess.Popen(['open', self.video_file])
         os.system("osascript -e 'set Volume 2.9'")
         sleep(1.5)
@@ -22,6 +23,7 @@ class Workout(object):
         pyautogui.hotkey('command', 'f')
 
     def load_image(self):
+        """Image file shows the exercises so weights can be pre-adjusted"""
         if self.image_file:
             subprocess.Popen(['open', self.image_file])
             sleep(10)
