@@ -6,7 +6,7 @@ from time import sleep
 from datetime import datetime
 import create
 
-PROGRAM_START_DATE = datetime(2018, 3, 19, 5, 0)
+PROGRAM_START_DATE = datetime(2019, 1, 7, 5, 0)
 
 
 def print_calendar(day):
